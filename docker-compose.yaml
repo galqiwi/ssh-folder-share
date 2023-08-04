@@ -1,0 +1,8 @@
+version: "2.2"
+services:
+  main:
+    volumes:
+      - ./authorized_keys:/home/hub/.ssh/authorized_keys
+    network_mode: "host"
+    build: .
+    restart: always
