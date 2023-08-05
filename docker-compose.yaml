@@ -1,8 +1,9 @@
 version: "2.2"
 services:
-  main:
+  share:
     volumes:
-      - ./authorized_keys:/home/hub/.ssh/authorized_keys
+      - ./authorized_keys:/home/galqiwi/.ssh/authorized_keys
+      - /home/galqiwi/.vbox-personal-share/:/share
     network_mode: "host"
     build: .
     restart: always
